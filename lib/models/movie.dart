@@ -184,3 +184,77 @@ var polysMovies = [
     movieCast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch'],
   ),
 ];
+
+var actionMovies = [
+  Movie(
+    movieName: 'Spider-Man: No Way Home',
+    moviePoster: 'assets/movie-posters/1.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 28m',
+    movieRating: '4.7',
+    movieSinopsis:
+        'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.',
+    movieCast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch'],
+  ),
+  Movie(
+    movieName: 'The Matrix Resurrections',
+    moviePoster: 'assets/movie-posters/2.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Sci-Fi',
+    movieDuration: '2h 28m',
+    movieRating: '3.5',
+    movieSinopsis:
+        'Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.',
+    movieCast: ['Keanu Reeves', 'Carrie-Anne Moss', 'Yahya Abdul-Mateen II'],
+  ),
+  Movie(
+    movieName: 'Eternals',
+    moviePoster: 'assets/movie-posters/3.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 36m',
+    movieRating: '4.2',
+    movieSinopsis:
+        'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
+    movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
+  ),
+ 
+];
+
+var actionMovies2 = [
+  Movie(
+    movieName: 'Spider-Man: No Way Home',
+    moviePoster: 'assets/movie-posters/4.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 28m',
+    movieRating: '4.7',
+    movieSinopsis:
+        'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.',
+    movieCast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch'],
+  ),
+  Movie(
+    movieName: 'The Matrix Resurrections',
+    moviePoster: 'assets/movie-posters/5.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Sci-Fi',
+    movieDuration: '2h 28m',
+    movieRating: '3.5',
+    movieSinopsis:
+        'Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.',
+    movieCast: ['Keanu Reeves', 'Carrie-Anne Moss', 'Yahya Abdul-Mateen II'],
+  ),
+  Movie(
+    movieName: 'Eternals',
+    moviePoster: 'assets/movie-posters/6.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 36m',
+    movieRating: '4.2',
+    movieSinopsis:
+        'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
+    movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
+  ),
+ 
+];

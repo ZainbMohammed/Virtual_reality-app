@@ -118,9 +118,177 @@ class HomePage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 20),
                   ),
                   const SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Polys movies',
+                      style: TextStyle(
+                        color: Constants.kWhiteColor,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      physics: BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: polysMovies.length,
+                      itemBuilder: ((context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.kMaskFirstIndex;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.kMaskLastIndex;
+                        } else {
+                          mask = Constants.kMaskCenter;
+                        }
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MovieDetailScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: 20,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MaskedImage(
+                              asset: polysMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Action movies',
+                      style: TextStyle(
+                        color: Constants.kWhiteColor,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      physics: BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: actionMovies.length,
+                      itemBuilder: ((context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.kMaskFirstIndex;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.kMaskLastIndex;
+                        } else {
+                          mask = Constants.kMaskCenter;
+                        }
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MovieDetailScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: 20,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MaskedImage(
+                              asset: actionMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(
                     height: 30,
                   ),
                   const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'More movies',
+                      style: TextStyle(
+                        color: Constants.kWhiteColor,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      physics: BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: actionMovies2.length,
+                      itemBuilder: ((context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.kMaskFirstIndex;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.kMaskLastIndex;
+                        } else {
+                          mask = Constants.kMaskCenter;
+                        }
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MovieDetailScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: 20,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MaskedImage(
+                              asset: actionMovies2[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 38,
+                  ),
+                  Padding(
                     padding: EdgeInsets.only(left: 20.0),
                     child: Text(
                       'Popular movies',
@@ -131,7 +299,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 35,
+                    height: 15,
                   ),
                   SizedBox(
                     height: 160,
@@ -174,7 +342,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 38,
+                    height: 30,
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left: 20.0),
@@ -187,7 +355,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 37,
+                    height: 15,
                   ),
                   SizedBox(
                     height: 160,
