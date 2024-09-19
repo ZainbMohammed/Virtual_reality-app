@@ -7,11 +7,31 @@ import 'package:virtual_reality/components/masked_image.dart';
 import 'package:virtual_reality/constants.dart';
 import 'package:virtual_reality/models/movie.dart';
 import 'package:virtual_reality/screens/movie_details.dart';
+import 'package:virtual_reality/components/movies_section.dart';
 
 import '../components/search_filed_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
+
+ void _onMovieTap(BuildContext context, Movie selectedMovie) {
+  print('Tapped movie: ${selectedMovie.movieName}');
+  try {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MovieDetailPage(movie: selectedMovie),
+      ),
+    ).then((value) {
+      print('Navigated to MovieDetailPage');
+    });
+  } catch (e) {
+    print('Navigation error: $e');  // Print any navigation errors
+  }
+}
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -120,275 +140,27 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'Polys movies',
-                      style: TextStyle(
-                        color: Constants.kWhiteColor,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 160,
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: polysMovies.length,
-                      itemBuilder: ((context, index) {
-                        String mask;
-                        if (index == 0) {
-                          mask = Constants.kMaskFirstIndex;
-                        } else if (index == newMovies.length - 1) {
-                          mask = Constants.kMaskLastIndex;
-                        } else {
-                          mask = Constants.kMaskCenter;
-                        }
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MovieDetailScreen(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              left: 20,
-                            ),
-                            height: 160,
-                            width: 142,
-                            child: MaskedImage(
-                              asset: polysMovies[index].moviePoster,
-                              mask: mask,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'Action movies',
-                      style: TextStyle(
-                        color: Constants.kWhiteColor,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 160,
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: actionMovies.length,
-                      itemBuilder: ((context, index) {
-                        String mask;
-                        if (index == 0) {
-                          mask = Constants.kMaskFirstIndex;
-                        } else if (index == newMovies.length - 1) {
-                          mask = Constants.kMaskLastIndex;
-                        } else {
-                          mask = Constants.kMaskCenter;
-                        }
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MovieDetailScreen(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              left: 20,
-                            ),
-                            height: 160,
-                            width: 142,
-                            child: MaskedImage(
-                              asset: actionMovies[index].moviePoster,
-                              mask: mask,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'More movies',
-                      style: TextStyle(
-                        color: Constants.kWhiteColor,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 160,
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: actionMovies2.length,
-                      itemBuilder: ((context, index) {
-                        String mask;
-                        if (index == 0) {
-                          mask = Constants.kMaskFirstIndex;
-                        } else if (index == newMovies.length - 1) {
-                          mask = Constants.kMaskLastIndex;
-                        } else {
-                          mask = Constants.kMaskCenter;
-                        }
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MovieDetailScreen(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              left: 20,
-                            ),
-                            height: 160,
-                            width: 142,
-                            child: MaskedImage(
-                              asset: actionMovies2[index].moviePoster,
-                              mask: mask,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 38,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'Popular movies',
-                      style: TextStyle(
-                        color: Constants.kWhiteColor,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 160,
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: newMovies.length,
-                      itemBuilder: ((context, index) {
-                        String mask;
-                        if (index == 0) {
-                          mask = Constants.kMaskFirstIndex;
-                        } else if (index == newMovies.length - 1) {
-                          mask = Constants.kMaskLastIndex;
-                        } else {
-                          mask = Constants.kMaskCenter;
-                        }
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MovieDetailScreen(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              left: 20,
-                            ),
-                            height: 160,
-                            width: 142,
-                            child: MaskedImage(
-                              asset: newMovies[index].moviePoster,
-                              mask: mask,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Text(
-                      'Upcoming movies',
-                      style: TextStyle(
-                        color: Constants.kWhiteColor,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 160,
-                    child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: upcomingMovies.length,
-                      itemBuilder: (context, index) {
-                        String mask;
-                        if (index == 0) {
-                          mask = Constants.kMaskFirstIndex;
-                        } else if (index == upcomingMovies.length - 1) {
-                          mask = Constants.kMaskLastIndex;
-                        } else {
-                          mask = Constants.kMaskCenter;
-                        }
-                        return GestureDetector(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              left: index == 0 ? 20 : 0,
-                            ),
-                            height: 160,
-                            width: 142,
-                            child: MaskedImage(
-                              asset: upcomingMovies[index].moviePoster,
-                              mask: mask,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
+                  // Movie sections
+                  MovieSection(
+                      title: 'Polys movies',
+                      movies: polysMovies,
+                      onMovieTap: (movie) => _onMovieTap(context, movie)),
+                  MovieSection(
+                      title: 'Action movies',
+                      movies: actionMovies,
+                      onMovieTap: (movie) => _onMovieTap(context, movie)),
+                  MovieSection(
+                      title: 'More movies',
+                      movies: actionMovies2,
+                      onMovieTap: (movie) => _onMovieTap(context, movie)),
+                  MovieSection(
+                      title: 'Popular movies',
+                      movies: newMovies,
+                      onMovieTap: (movie) => _onMovieTap(context, movie)),
+                  MovieSection(
+                      title: 'Upcoming movies',
+                      movies: upcomingMovies,
+                      onMovieTap: (movie) => _onMovieTap(context, movie)),
                 ],
               ),
             ),

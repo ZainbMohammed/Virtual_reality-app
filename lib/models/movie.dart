@@ -137,7 +137,6 @@ var upcomingMovies = [
   ),
 ];
 
-
 var polysMovies = [
   Movie(
     movieName: 'Spider-Man: No Way Home',
@@ -219,13 +218,23 @@ var actionMovies = [
         'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
     movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
   ),
- 
+  Movie(
+    movieName: 'Eternals',
+    moviePoster: 'assets/movie-posters/4.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 36m',
+    movieRating: '4.2',
+    movieSinopsis:
+        'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
+    movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
+  ),
 ];
 
 var actionMovies2 = [
   Movie(
     movieName: 'Spider-Man: No Way Home',
-    moviePoster: 'assets/movie-posters/4.jpeg',
+    moviePoster: 'assets/movie-posters/5.jpeg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 28m',
@@ -236,7 +245,7 @@ var actionMovies2 = [
   ),
   Movie(
     movieName: 'The Matrix Resurrections',
-    moviePoster: 'assets/movie-posters/5.jpeg',
+    moviePoster: 'assets/movie-posters/6.jpeg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Sci-Fi',
     movieDuration: '2h 28m',
@@ -247,7 +256,7 @@ var actionMovies2 = [
   ),
   Movie(
     movieName: 'Eternals',
-    moviePoster: 'assets/movie-posters/6.jpeg',
+    moviePoster: 'assets/movie-posters/7.jpeg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 36m',
@@ -256,5 +265,15 @@ var actionMovies2 = [
         'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
     movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
   ),
- 
+  Movie(
+    movieName: 'Eternals',
+    moviePoster: 'assets/movie-posters/8.jpeg',
+    movieReleaseYear: '2021',
+    movieCategory: 'Action-Adventure-Fantasy',
+    movieDuration: '2h 36m',
+    movieRating: '4.2',
+    movieSinopsis:
+        'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
+    movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
+  ),
 ];
